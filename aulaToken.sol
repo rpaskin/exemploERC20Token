@@ -52,8 +52,8 @@ contract aulaToken is ERC20Interface, SafeMath {
     constructor() public {
         name = "aulaToken";
         symbol = "ATK";
-        decimals = 4;
-        _totalSupply = 1000000000;
+        decimals = 6;
+        _totalSupply = 1000000000000;
         
         balances[msg.sender] = _totalSupply;
         emit Transfer(address(0), msg.sender, _totalSupply);
