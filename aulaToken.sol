@@ -34,7 +34,7 @@ contract SafeMath {
 }
 
 
-contract TOKENNAME is ERC20Interface, SafeMath {
+contract aulaToken is ERC20Interface, SafeMath {
     string public name;
     string public symbol;
     uint8 public decimals; // 18 decimals is the strongly suggested default, avoid changing it
@@ -50,10 +50,10 @@ contract TOKENNAME is ERC20Interface, SafeMath {
      * Initializes contract with initial supply tokens to the creator of the contract
      */
     constructor() public {
-        name = "TOKENNAME";
-        symbol = "TNM";
-        decimals = 8;
-        _totalSupply = 100000000000000;
+        name = "aulaToken";
+        symbol = "ATK";
+        decimals = 4;
+        _totalSupply = 1000000000;
         
         balances[msg.sender] = _totalSupply;
         emit Transfer(address(0), msg.sender, _totalSupply);
